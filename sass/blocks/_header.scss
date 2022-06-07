@@ -28,6 +28,9 @@
             line-height: 29px;
             color: #244D4D;
             cursor: pointer;
+            img {
+                outline: none;
+            }
         }
         &_menu {
             display: flex;
