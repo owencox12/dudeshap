@@ -96,6 +96,7 @@ link.addEventListener("click", function(e){
 
 let search = document.querySelector(".header__item_search")
 
-search.addEventListener("click", function(){
+search.addEventListener("click", function(e){
+  e.preventDefault();
   document.querySelector(".search").classList.toggle("search_active")
 })
