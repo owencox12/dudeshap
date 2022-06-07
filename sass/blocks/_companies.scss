@@ -1,0 +1,21 @@
+.companies {
+    min-height: 400px;
+    &__title {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        color: #244D4D;
+        text-align: center;
+        padding-top: 140px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 49px;
+    }
+    &__item {
+        cursor: pointer;
+    }
+}

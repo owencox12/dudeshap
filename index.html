@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <svg style="display: none;">
+        <symbol id="love" viewBox="0 0 32 32">
+            <path class="cls-1" d="M16,28.72a3,3,0,0,1-2.13-.88L3.57,17.54a8.72,8.72,0,0,1-2.52-6.25,8.06,8.06,0,0,1,8.14-8A8.06,8.06,0,0,1,15,5.68l1,1,.82-.82h0a8.39,8.39,0,0,1,11-.89,8.25,8.25,0,0,1,.81,12.36L18.13,27.84A3,3,0,0,1,16,28.72ZM9.15,5.28A6.12,6.12,0,0,0,4.89,7a6,6,0,0,0-1.84,4.33A6.72,6.72,0,0,0,5,16.13l10.3,10.3a1,1,0,0,0,1.42,0L27.23,15.91A6.25,6.25,0,0,0,29,11.11a6.18,6.18,0,0,0-2.43-4.55,6.37,6.37,0,0,0-8.37.71L16.71,8.8a1,1,0,0,1-1.42,0l-1.7-1.7a6.28,6.28,0,0,0-4.4-1.82Z"/>
+        </symbol>
+    </svg>
+    <svg style="display: none;">
+        <symbol id="facebook" viewBox="0 0 56.693 56.693">
+            <path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
+        </symbol>
+    </svg>
+    <svg style="display: none;">
+        <symbol id="youtube" viewBox="0 0 512 512">
+            <g><path d="M508.6,148.8c0-45-33.1-81.2-74-81.2C379.2,65,322.7,64,265,64c-3,0-6,0-9,0s-6,0-9,0c-57.6,0-114.2,1-169.6,3.6   c-40.8,0-73.9,36.4-73.9,81.4C1,184.6-0.1,220.2,0,255.8C-0.1,291.4,1,327,3.4,362.7c0,45,33.1,81.5,73.9,81.5   c58.2,2.7,117.9,3.9,178.6,3.8c60.8,0.2,120.3-1,178.6-3.8c40.9,0,74-36.5,74-81.5c2.4-35.7,3.5-71.3,3.4-107   C512.1,220.1,511,184.5,508.6,148.8z M207,353.9V157.4l145,98.2L207,353.9z"/></g>
+        </symbol>
+    </svg>
+    <svg style="display: none;">
+        <symbol id="twitter" viewBox="0 0 56.693 56.693">
+            <path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/>
+        </symbol>
+    </svg>
+    <svg style="display: none;">
+        <symbol id="instagram" viewBox="0 0 56.7 56.7">
+            <g>
+                <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+                    c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+                <circle cx="41.5" cy="16.4" r="2.9"/>
+                <path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+                    h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+                    s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+                    c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
+            </g>
+        </symbol>
+    </svg>
+    <header class="header">
+        <div class="container">
+        <div class="header__wrapper">
+            <div class="header__item">
+                <div class="header__item_logo">
+                    DudeShape
+                </div>
+            </div>
+            <div class="header__item">
+                <ul class="header__item_menu">
+                    <li class="header__item_menu_type"><a href="#home" data-id="#home">Home</a></li>
+                    <li class="header__item_menu_type"><a href="#about" data-id="#about">About</a></li>
+                    <li class="header__item_menu_type"><a href="#features" data-id="#features">Features</a></li>
+                    <li class="header__item_menu_type"><a href="#contact" data-id="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="header__item header__item_third">
+                <div class="header__item_search">
+                    <a href="#"><img src="image/search.png" alt=""></a>
+                </div>
+                <div class="header__item_burger">
+                    <span></span>
+                </div>
+                <div class="header__burger_list">
+                    <ul class="header__burger_list_menu">
+                        <li class="header__burger_list_menu_type"><a href="#">Home</a></li>
+                        <li class="header__burger_list_menu_type"><a href="#">About</a></li>
+                        <li class="header__burger_list_menu_type"><a href="#">Features</a></li>
+                        <li class="header__burger_list_menu_type"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <section class="promo" id="home">
+        <div class="container container__promo">
+            <div class="promo__image">
+                <img src="image/promoBG.png" alt="">
+            </div>
+            <div class="promo__block">
+                <div class="promo__block_text">
+                    <div class="promo__block_title">
+                        We Help You Make Modern Furniture
+                    </div>
+                    <div class="promo__block_descr">
+                        We will help you to make an elegant and luxurious interior designed by professional interior designer.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="companies">
+        <div class="container">
+            <div class="companies__title">
+                Trusted by 20,000+ companies
+            </div>
+            <div class="companies__wrapper">
+                <div class="companies__item">
+                    <div class="companies__item_image">
+                        <img src="image/companies1.png" alt="">
+                    </div>
+                </div>
+                <div class="companies__item">
+                    <div class="companies__item_image">
+                        <img src="image/companies2.png" alt="">
+                    </div>
+                </div>
+                <div class="companies__item">
+                    <div class="companies__item_image">
+                        <img src="image/companies3.png" alt="">
+                    </div>
+                </div>
+                <div class="companies__item">
+                    <div class="companies__item_image">
+                        <img src="image/companies4.png" alt="">
+                    </div>
+                </div>
+                <div class="companies__item">
+                    <div class="companies__item_image">
+                        <img src="image/companies5.png" alt="">
+                    </div>
+                </div>
+                <div class="companies__item">
+                    <div class="companies__item_image">
+                        <img src="image/companies6.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__wrapper">
+                <div class="about__item">
+                    <div class="about__item_title">
+                        About Us
+                    </div>
+                    <div class="about__item_descr">
+                        All of our furniture uses the best materials and choices for our customers.All of our furniture uses the best materials 
+                    </div>
+                    <div class="about__item_block">
+                        <div class="about__item_block_image">
+                            <img src="image/about1.png" alt="">
+                        </div>
+                        <div class="about__item_block_text">
+                            <div class="about__item_block_text_title">
+                                Best Quality
+                            </div>
+                            <div class="about__item_block_text_descr">
+                                All of our furniture uses the best materials and choices
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__item_block">
+                        <div class="about__item_block_image">
+                            <img src="image/about2.png" alt="">
+                        </div>
+                        <div class="about__item_block_text">
+                            <div class="about__item_block_text_title">
+                                Best Quality
+                            </div>
+                            <div class="about__item_block_text_descr">
+                                All of our furniture uses the best materials and choices
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__item_block">
+                        <div class="about__item_block_image">
+                            <img src="image/about3.png" alt="">
+                        </div>
+                        <div class="about__item_block_text">
+                            <div class="about__item_block_text_title">
+                                Best Quality
+                            </div>
+                            <div class="about__item_block_text_descr">
+                                All of our furniture uses the best materials and choices
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__item">
+                    <div class="about__item_image">
+                        <img src="image/aboutitem.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="furniture" id="features">
+        <div class="container">
+            <div class="furniture__wrapper">
+                <div class="furniture__item">
+                    <div class="furniture__item_title">
+                        Our Popular Furniture
+                    </div>
+                    <div class="furniture__item_descr">
+                        All of our furniture uses the best materials and choices for our customers.All of our furniture uses the best materials and choices for our customers.
+                    </div>
+                </div>
+                <div class="furniture__item furniture__item_second">
+                    <div class="furniture__item_left">
+                        <img src="image/left.png" alt="">
+                    </div>
+                    <div class="furniture__item_right">
+                        <img src="image/right.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="furniture__block">
+                            <div class="furniture__block_image">
+                                <img src="image/furniture1.png" alt="">
+                            </div>
+                            <div class="furniture__block_wrapper">
+                                <div class="furniture__block_left">
+                                    <div class="furniture__block_name">
+                                        White Swan Chair 
+                                    </div>
+                                    <div class="furniture__block_price">
+                                        $40
+                                    </div>
+                                </div>
+                                <div class="furniture__block_right">
+                                    <div class="furniture__block_icons">
+                                        <div class="furniture__block_icons_icon">
+                                            <svg><use xlink:href="#love"></use></svg>
+                                        </div>
+                                        <div class="furniture__block_icons_icon">
+                                            <img src="image/icon2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="furniture__block_btn">
+                                        <button class="button button--furniture"><span>Buy Now</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="furniture__block">
+                            <div class="furniture__block_image">
+                                <img src="image/furniture2.png" alt="">
+                            </div>
+                            <div class="furniture__block_wrapper">
+                                <div class="furniture__block_left">
+                                    <div class="furniture__block_name">
+                                        White Swan Chair 
+                                    </div>
+                                    <div class="furniture__block_price">
+                                        $40
+                                    </div>
+                                </div>
+                                <div class="furniture__block_right">
+                                    <div class="furniture__block_icons">
+                                        <div class="furniture__block_icons_icon">
+                                            <svg><use xlink:href="#love"></use></svg>
+                                        </div>
+                                        <div class="furniture__block_icons_icon">
+                                            <img src="image/icon2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="furniture__block_btn">
+                                        <button class="button button--furniture"><span>Buy Now</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="furniture__block">
+                            <div class="furniture__block_image">
+                                <img src="image/furniture3.png" alt="">
+                            </div>
+                            <div class="furniture__block_wrapper">
+                                <div class="furniture__block_left">
+                                    <div class="furniture__block_name">
+                                        White Swan Chair 
+                                    </div>
+                                    <div class="furniture__block_price">
+                                        $40
+                                    </div>
+                                </div>
+                                <div class="furniture__block_right">
+                                    <div class="furniture__block_icons">
+                                        <div class="furniture__block_icons_icon">
+                                            <svg><use xlink:href="#love"></use></svg>
+                                        </div>
+                                        <div class="furniture__block_icons_icon">
+                                            <img src="image/icon2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="furniture__block_btn">
+                                        <button class="button button--furniture"><span>Buy Now</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="furniture__block">
+                            <div class="furniture__block_image">
+                                <img src="image/furniture1.png" alt="">
+                            </div>
+                            <div class="furniture__block_wrapper">
+                                <div class="furniture__block_left">
+                                    <div class="furniture__block_name">
+                                        White Swan Chair 
+                                    </div>
+                                    <div class="furniture__block_price">
+                                        $40
+                                    </div>
+                                </div>
+                                <div class="furniture__block_right">
+                                    <div class="furniture__block_icons">
+                                        <div class="furniture__block_icons_icon">
+                                            <svg><use xlink:href="#love"></use></svg>
+                                        </div>
+                                        <div class="furniture__block_icons_icon">
+                                            <img src="image/icon2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="furniture__block_btn">
+                                        <button class="button button--furniture"><span>Buy Now</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="furniture__block">
+                            <div class="furniture__block_image">
+                                <img src="image/furniture1.png" alt="">
+                            </div>
+                            <div class="furniture__block_wrapper">
+                                <div class="furniture__block_left">
+                                    <div class="furniture__block_name">
+                                        White Swan Chair 
+                                    </div>
+                                    <div class="furniture__block_price">
+                                        $40
+                                    </div>
+                                </div>
+                                <div class="furniture__block_right">
+                                    <div class="furniture__block_icons">
+                                        <div class="furniture__block_icons_icon">
+                                            <svg><use xlink:href="#love"></use></svg>
+                                        </div>
+                                        <div class="furniture__block_icons_icon">
+                                            <img src="image/icon2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="furniture__block_btn">
+                                        <button class="button button--furniture"><span>Buy Now</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="furniture__title">All Furniture</div>
+            <div class="furniture__tabs">
+                <div class="furniture__tabs_tab furniture__tabs_tab_active" data-tab="#tab-1">
+                    Shop By Room
+                </div>
+                <div class="furniture__tabs_tab" data-tab="#tab-2">
+                    Shop By Category
+                </div>
+                <div class="furniture__tabs_tab" data-tab="#tab-3">
+                    Shop By Style
+                </div>
+            </div>
+            <div class="furniture__content furniture__content_active" id="tab-1">
+                <div class="furniture__content_item">
+                    <div class="furniture__content_item_pa">
+                        <img src="image/furnitureImg.png" alt="">
+                    </div>
+                </div>
+                tab1
+                <div class="furniture__content_item_second">
+                    <div class="furniture__content_item_blocks">
+                        <div class="furniture__content_item_blocks_block furniture__content_item_blocks_block_active">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock1.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Living Room
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock2.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Kitchen
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock3.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Dining Room
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock1.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Office
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock5.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Kitchen
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock6.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Kitchen
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="furniture__content" id="tab-2">
+                <div class="furniture__content_item">
+                    <div class="furniture__content_item_pa">
+                        <img src="image/furnitureImg.png" alt="">
+                    </div>
+                </div>
+                tab2
+                <div class="furniture__content_item_second">
+                    <div class="furniture__content_item_blocks">
+                        <div class="furniture__content_item_blocks_block furniture__content_item_blocks_block_active">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock1.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Living Room
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock2.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Kitchen
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock3.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Dining Room
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock1.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Office
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock5.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Kitchen
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock6.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Kitchen
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="furniture__content" id="tab-3">
+                <div class="furniture__content_item">
+                    <div class="furniture__content_item_pa">
+                        <img src="image/furnitureImg.png" alt="">
+                    </div>
+                </div>
+                tab3
+                <div class="furniture__content_item_second">
+                    <div class="furniture__content_item_blocks">
+                        <div class="furniture__content_item_blocks_block furniture__content_item_blocks_block_active">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock1.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Living Room
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock2.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Kitchen
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock3.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Dining Room
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock1.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Office
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock5.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Kitchen
+                            </div>
+                        </div>
+                        <div class="furniture__content_item_blocks_block">
+                            <div class="furniture__content_item_blocks_block_image">
+                                <img src="image/furnitureblock6.png" alt="">
+                            </div>
+                            <div class="furniture__content_item_blocks_block_text">
+                                Kitchen
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="customers">
+        <div class="container">
+            <div class="customers__wrapper">
+                <div class="customers__item">
+                    <div class="customers__item_block">
+                        <div class="customers__item_block_image"><img src="image/customersIMG.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="customers__item">
+                    <div class="customers__item_title">
+                        Our customers are verry importan to us
+                    </div>
+                    <div class="customers__item_descr">
+                        All of our furniture uses the best matials and choices for our customers.All of our furniture uses the best materials and choices for our customers.
+                    </div>
+                    <div class="customers__item_user">
+                        <div class="customers__item_user_image">
+                            <img src="image/customersUser.png" alt="">
+                        </div>
+                        <div class="customers__item_info">
+                            <div class="customers__item_user_name">Mh Jibon</div>
+                            <div class="customers__item_user_rating">
+                                <img src="image/star.png" alt=""><span>4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="join" id="contact">
+        <div class="container">
+            <div class="join__block">
+                <div class="join__block_title">
+                    Subscribe to get the latest news about us
+                </div>
+                <div class="join__block_descr">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore at dolore.
+                </div>
+                <form action="#" class="join__block_form">
+                    <div class="join__block_form_input">
+                        <input type="search" placeholder="Enter your email">
+                        <div class="join__block_form_btn">
+                            <button class="button button--join"><span>Register</span></button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__item">
+                    <div class="footer__item_title footer__item_title_logo">
+                        DudeShape
+                    </div>
+                    <div class="footer__item_descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore at dolore.
+                    </div>
+                    <div class="footer__item_follow">
+                        Follow Us :
+                    </div>
+                    <div class="footer__item_socials">
+                        <div class="footer__item_socials_social">
+                            <svg><use xlink:href="#facebook"></use></svg>
+                        </div>
+                        <div class="footer__item_socials_social">
+                            <svg><use xlink:href="#twitter"></use></svg>
+                        </div>
+                        <div class="footer__item_socials_social">
+                            <svg><use xlink:href="#instagram"></use></svg>
+                        </div>
+                        <div class="footer__item_socials_social">
+                            <svg><use xlink:href="#youtube"></use></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item_title">Take a tour</div>
+                    <ul class="footer__item_list">
+                        <li class="footer__item_list_type"><a href="#">Features</a></li>
+                        <li class="footer__item_list_type"><a href="#">Pricing</a></li>
+                        <li class="footer__item_list_type"><a href="#">Product</a></li>
+                        <li class="footer__item_list_type"><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item_title">Our company</div>
+                    <ul class="footer__item_list">
+                        <li class="footer__item_list_type"><a href="#">About Us</a></li>
+                        <li class="footer__item_list_type"><a href="#">Blog</a></li>
+                        <li class="footer__item_list_type"><a href="#">Media</a></li>
+                        <li class="footer__item_list_type"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item_title">Subscribe</div>
+                    <div class="footer__item_text">
+                        Subscribe to get the latest news from us
+                    </div>
+                    <form action="#" class="footer__item_form">
+                        <div class="footer__item_form_inp">
+                            <input type="email" placeholder="Email Address">
+                            <div class="footer__item_form_btn">
+                                <button class="button button--footer"><img src="image/arrow.png" alt=""></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="search">
+        <form action="#" class="search__form">
+            <input type="search" class="search__form_inp" placeholder="enter your search">
+            <div class="search__form_btn">
+                <button class="button button--search"><span>find</span></button>
+            </div>
+        </form>
+    </div>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

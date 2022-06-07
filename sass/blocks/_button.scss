@@ -1,0 +1,48 @@
+.button {
+    &--furniture {
+        width: 78.85px;
+        height: 32px;
+        background: #244D4D;
+        border-radius: 6px;
+        border: none;
+        span {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+    }
+    &--join {
+        width: 125.32px;
+        height: 52px;
+        border: none;
+        background: #FFB624;
+        border-radius: 10px;
+        span {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FFFFFF;
+        }
+    }
+    &--footer {
+        width: 28px;
+        height: 28px;
+        background: #FFB624;
+        border: none;
+        border-radius: 50%;
+    }
+    &--search {
+        width: 125.32px;
+        height: 53px;
+        background: #244D4D;
+        border: none;
+        span {
+            color: #fff;
+        }
+    }
+}

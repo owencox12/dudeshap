@@ -1,0 +1,52 @@
+.about {
+    min-height: 800px;
+    &__wrapper {
+        display: flex;
+    }
+    &__item {
+        width: 50%;
+        &_title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            color: #244D4D;
+        }
+        &_descr {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px;
+            color: #383738;
+            width: 488px;
+            margin-top: 20px;
+        }
+        &_block {
+            display: flex;
+            margin-top: 40px;
+            &_text {
+                margin-left: 19.5px;
+                &_title {
+                    font-family: 'DM Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 27px;
+                    color: #244D4D;
+                }
+                &_descr {
+                    font-family: 'DM Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #383738;
+                    width: 271px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

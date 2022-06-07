@@ -1,0 +1,40 @@
+.promo {
+    position: relative;
+    padding-top: 130px;
+    &__image {
+        text-align: right;
+    }
+    &__block {
+        position: absolute;
+        background: #154444;
+        width: 620px;
+        height: 469px;
+        top: 20%;
+        left: 12%;
+        &_text {
+            position: absolute;
+            top: 0;
+            padding-top: 74px;
+            padding-left: 120px;
+        }
+        &_title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 68px;
+            color: #FFFFFF;
+            width: 458px;
+        }
+        &_descr {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 29px;
+            color: #FFFFFF;
+            width: 333px;
+            margin-top: 30px;
+        }
+    }
+}

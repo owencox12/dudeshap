@@ -1,0 +1,66 @@
+.customers {
+    min-height: 700px;
+    &__wrapper {
+        display: flex;
+    }
+    &__item {
+        width: 50%;
+        &_block {
+            width: 492.42px;
+            height: 492.42px;
+            background: #244D4D;
+            border-radius: 50%;
+            position: relative;
+            &_image {
+                position: absolute;
+                left: 20%;
+            }
+        }
+        &_title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 48px;
+            color: #244D4D;
+            margin-top: 70px;
+            width: 412px;
+        }
+        &_descr {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: #383738;
+            margin-top: 30px;
+        }
+        &_info {
+            margin-left: 10px;
+        }
+        &_user {
+            display: flex;
+            margin-top: 40px;
+            &_name {
+                margin-left: 10px;
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: #000000;
+            }
+            &_rating {
+                span {
+                    font-family: 'DM Sans';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 15px;
+                    color: #000000;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}

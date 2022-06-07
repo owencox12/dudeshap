@@ -1,0 +1,189 @@
+.furniture {
+    min-height: 1540px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        &_second {
+            display: flex;
+            margin-top: 80px;
+        }
+        &_title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            color: #244D4D;
+        }
+        &_descr {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: #383738;
+            width: 819px;
+            margin-top: 20px;
+        }
+        &_left {
+            background: #ECF4FF;
+            width: 35px;
+            height: 35px;
+            border-radius: 50px;
+            text-align: center;
+            margin-right: 15px;
+            cursor: pointer;
+            img {
+                padding-top: 7px;
+            }
+        }
+        &_right {
+            background: #ECF4FF;
+            width: 35px;
+            height: 35px;
+            border-radius: 50px;
+            text-align: center;
+            cursor: pointer;
+            img {
+                padding-top: 7px;
+            }
+        }
+    }
+    &__block {
+        width: 380px;
+        background: #FFFFFF;
+        box-shadow: 0px 13px 26px rgba(0, 0, 0, 0.07);
+        margin-top: 60px;
+
+        &_image {
+
+        }
+        &_wrapper {
+            display: flex;
+            margin-top: 30px;
+            justify-content: space-between;
+            padding: 25px;
+        }
+        &_left {
+        }
+        &_name {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 27px;
+            color: #244D4D;
+        }
+        &_price {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31px;
+            color: #154444;
+            margin-top: 20px;
+        }
+        &_icons {
+            display: flex;
+            &_icon {
+                background: #ECF4FF;
+                border-radius: 50px;
+                text-align: center;
+                padding: 7px;
+                cursor: pointer;
+                margin-left: 8px;
+                svg {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+        &_btn {
+            margin-top: 20px;
+        }
+    }
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        color: #244D4D;
+        text-align: center;
+        margin-top: 140px;
+    }
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        &_tab {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 27px;
+            color: #919090;
+            margin: 0 50px;
+            cursor: pointer;
+            &_active {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 27px;
+                color: #244D4D;
+                border-bottom: 2.3px solid #154444;
+                padding-bottom: 8px;
+            }
+        }
+    }
+    &__content {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        display: none;
+        &_active {
+            display: flex;
+        }
+        &_item {
+            position: relative;
+            width: 552.84px;
+            height: 389.32px;
+            background: #154444;
+            &_pa {
+                position: absolute;
+                top: 4%;
+                left: 6%;
+            }
+            &_blocks {
+                display: flex;
+                flex-wrap: wrap;
+                &_block {
+                    border: 1.5px solid #D9DCE5;
+                    width: 45%;
+                    padding: 15px 5px;
+                    margin: 16.5px 6px;
+                    cursor: pointer;
+                    &_active {
+                        background: rgba(0,0,0,.9);
+                    }
+                    &_image {
+                        text-align: center;
+                    }
+                    &_text {
+                        font-family: 'DM Sans';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 21px;
+                        color: #808080;
+                        text-align: center;
+                        margin-top: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

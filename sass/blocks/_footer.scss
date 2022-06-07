@@ -1,0 +1,114 @@
+.footer {
+    min-height: 442px;
+    background: #305F64;
+    &__wrapper {
+        display: flex;
+        padding-top: 80px;
+        justify-content: space-between;
+    }
+    &__item {
+        &_title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 26px;
+            color: #FFFFFF;
+            &_logo {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+                color: #FFFFFF;
+            }
+        }
+        &_descr {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+            width: 337px;
+            margin-top: 30px;
+        }
+        &_follow {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 26px;
+            color: #FFFFFF;
+            margin-top: 40px;
+        }
+        &_socials {
+            display: flex;
+            margin-top: 20px;
+            &_social {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: #fff;
+                text-align: center;
+                margin: 0 7.5px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                svg {
+                    width: 25px;
+                    height: 25px;
+                    fill: #305F64;
+                    padding-top: 7px;
+                    cursor: pointer;
+                    &:hover {
+                        fill: gray;
+                        transition: all .3s;
+                    }
+                }
+            }
+        }
+        &_list {
+            &_type {
+                margin: 16px 0;
+                a {
+                    font-family: 'DM Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 23px;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }
+            }
+        }
+        &_text {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 23px;
+            color: #FFFFFF;
+            margin-top: 30px;
+            width: 240px;
+            margin-bottom: 40px;
+        }
+        &_form {
+            &_inp {
+                position: relative;
+                input {
+                    width: 253px;
+                    height: 48px;
+                    padding-left: 22px;
+                    border-radius: 8px;
+                    border: none;
+                }
+            }
+            &_btn {
+                position: absolute;
+                top: 20%;
+                right: 5%;
+            }
+        }
+    }
+}
